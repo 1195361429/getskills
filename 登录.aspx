@@ -9,11 +9,11 @@
  
 </head>
 <body style="background-color:azure" >
-    <form id="form1" runat="server" style="align-content">
+    <form id="form1" runat="server">
         <p>
             &nbsp;</p>
         <p>
-            <asp:Image ID="Image1" runat="server" ImageAlign="Top" ImageUrl="img/bg_header.jpg" Width="1514px" />
+            <asp:Image ID="Image1" runat="server" ImageAlign="Top" ImageUrl="img/1.jpg" Width="1514px" />
         </p>
         <p>
             &nbsp;</p>
@@ -26,6 +26,15 @@
         <p>
             密码：<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="密码不能为空" ControlToValidate="TextBox2" ></asp:RequiredFieldValidator>
+        </p>
+        <p>
+             
+
+&nbsp;验证码:<asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox3_TextChanged"></asp:TextBox>
+&nbsp;<asp:Label ID="Label1" runat="server"></asp:Label>
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="获取验证码" />
+&nbsp;
+            <asp:Label ID="Label2" runat="server" ForeColor="Red" Text="验证码错误！" Visible="False"></asp:Label>
         </p>
         <p>
             用户：</p>
