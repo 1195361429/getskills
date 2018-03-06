@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 
+
 public partial class 登陆 : System.Web.UI.Page
 {
     string admin_id, admin_pwd;
@@ -21,6 +22,9 @@ public partial class 登陆 : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
+     
+        //存储用户名，传值
+        Session["usrname"] = TextBox1.Text;
         try
         {
             if (string.Equals(TextBox3.Text, Label1.Text)) {
@@ -45,9 +49,9 @@ public partial class 登陆 : System.Web.UI.Page
                 }
                 else if (RadioButtonList1.SelectedIndex == 1)
                 {
-                    SqlConnection Conn2 = new SqlConnection("data source=许炜\\SQLEXPRESS;Integrated Security=true;Initial Catalog=sms");
+                    SqlConnection Conn2 = new SqlConnection("data source=许炜\\SQLEXPRESS;Integrated Security=true;Initial Catalog=xzwc");
                     Conn2.Open();
-                    String selectstr2 = string.Format("select count(*) from teacher where tno='{0}' and tpwd='{1}'", admin_id, admin_pwd);
+                    String selectstr2 = string.Format("select count(*) from Teacher where Tno='{0}' and tTpwd='{1}'", admin_id, admin_pwd);
                     SqlCommand comm2 = new SqlCommand(selectstr2, Conn2);
                     int j = Convert.ToInt32(comm2.ExecuteScalar()); //返回记录数          
                     if (j > 0)//如大于0，说明记录存在，登录成功
@@ -65,7 +69,7 @@ public partial class 登陆 : System.Web.UI.Page
                 {
                     SqlConnection Conn2 = new SqlConnection("data source=许炜\\SQLEXPRESS;Integrated Security=true;Initial Catalog=sms");
                     Conn2.Open();
-                    String selectstr2 = string.Format("select count(*) from manager where mno='{0}' and mpwd='{1}'", admin_id, admin_pwd);
+                    String selectstr2 = string.Format("select count(*) from Manager where Mno='{0}' and Mpwd='{1}'", admin_id, admin_pwd);
                     SqlCommand comm2 = new SqlCommand(selectstr2, Conn2);
                     int k = Convert.ToInt32(comm2.ExecuteScalar()); //返回记录数          
                     if (k > 0)//如大于0，说明记录存在，登录成功

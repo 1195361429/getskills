@@ -6,47 +6,53 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>mainpage</title>
-    <link   href="div.css" rel="stylesheet"/>
+    <!--<link   href="div.css" rel="stylesheet"/> -->
 </head>
 <body>
+ 
     
     <form id="form1" runat="server">
     
-    <div class="d1">
-        <h3>
-            1</h3>
+            <asp:Image ID="Image1" runat="server" Height="152px" Width="100%" ImageUrl="~/img/1.jpg" style="margin-top: 0px"/>
+
+
+
+        //！！！！！！！！！！！！！！！！！！！通过Target属性对IFAME框架页面变换
+       <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="100%" 
+            Font-Size="14px" ForeColor="#161621" Font-Bold="True" 
+            PathSeparator="1" StaticEnableDefaultPopOutImage="False" OnMenuItemClick="Menu1_MenuItemClick" 
+            > 
+                <DynamicMenuStyle BackColor="#D0E6DE" /> 
+                <DynamicMenuItemStyle ItemSpacing="5px" /> 
+                <Items> 
+                        <asp:MenuItem Text="个人信息"  Target="fr" NavigateUrl="学生个人信息.aspx"></asp:MenuItem> 
+                        <asp:MenuItem Text="已选课程" Target="fr" NavigateUrl ="已选课程.aspx"></asp:MenuItem> 
+                        <asp:MenuItem Text="添加选课"  Target="fr" NavigateUrl="添加选课.aspx"></asp:MenuItem> 
+                        <asp:MenuItem Text="在线联系" Target="fr" NavigateUrl="help.aspx"></asp:MenuItem> 
+                </Items> 
+            </asp:Menu> 
+
         <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-    </div>
         
-            <asp:Image ID="Image1" runat="server" Height="152px" Width="1228px" ImageUrl="~/img/1.jpg" style="margin-top: 0px"/>
+            &nbsp;</p>
+        <p>
+        
+            &nbsp;</p>
+        <p>
+        
+        <iframe name="fr" src="学生个人信息.aspx" style="width: 70%; height: 476px; margin-left: 357px; margin-bottom: 0px;"></iframe>
 
     
-
+        </p>
         <p>
         
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="个人信息" style="width: 102px" />
-        </p>
+            &nbsp;</p>
+        <p>
         
-        <iframe name="fr" src="学生个人信息.aspx"height: 518px; width: 1023px" style="height: 318px; width: 1249px"></iframe>
+            &nbsp;</p>
+        <p>
+        
+            &nbsp;</p>
 
     
         </form>

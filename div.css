@@ -3,27 +3,11 @@
     padding:100%
 }
 .d1{
-    width:1312px;
-    height:184px;
+    width:99%;
+    height:35%;
+    margin-top:500px;
  
-  position:absolute;
-    top: -20px;
-    left: -74px;
-    margin-top: 0px;
+ 
+
 }
 
-.d2 {
-    width: 1388px;
-    height: 82px;
-    background-color: orangered;
-    margin-right: 2px;
-}
-
-.d3 {
-    width: 1049px;
-    height: 600px;
-    background-color:white;
-    margin-left: 250px;
-    position:absolute;
-  
-}

@@ -21,4 +21,9 @@ public partial class 功能模块 : System.Web.UI.Page
     {
          
     }
+
+    protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+    {
+
+    }
 }

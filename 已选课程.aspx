@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="学生个人信息.aspx.cs" Inherits="学生个人信息" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="已选课程.aspx.cs" Inherits="已选课程" %>
 
 <!DOCTYPE html>
 
@@ -10,10 +10,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            hi,<asp:Label ID="Label1" runat="server" Text="sname"></asp:Label>
-            ,下面是您的个人信息：<br />
+          
+            您选修的课程信息：<br />
+          
         </div>
-        <asp:GridView ID="GridView1" runat="server">
+        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
         </asp:GridView>
     </form>
 </body>
